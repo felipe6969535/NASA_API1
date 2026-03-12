@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário Cósmico | NASA APOD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="three.min.js"></script>
+</head>
+
+<body>
+    <div id="three-container" class="three-container"></div>
+
+    <main class="app-container">
+        <header class="hero">
+            <h1>Aniversário Cósmico</h1>
+            <p>Descubra como o universo era no dia em que você nasceu.</p>
+        </header>
+
+        <section class="input-section glass">
+            <div class="input-group">
+                <label for="birth-date">Insira sua data de nascimento:</label>
+                <div class="controls">
+                    <input type="date" id="birth-date" required>
+                    <button id="fetch-btn">Revelar o Universo</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-container" class="result-section glass hidden">
+            <div class="loader hidden" id="loader">
+                <div class="spinner"></div>
+                <p>Atravessando a galáxia...</p>
+            </div>
+
+            <div id="apod-content" class="apod-content">
+                <h2 id="apod-title"></h2>
+                <div class="image-wrapper">
+                    <img id="apod-image" src="" alt="NASA APOD">
+                </div>
+                <div class="explanation-wrapper">
+                    <p id="apod-date" class="date-badge"></p>
+                    <p id="apod-explanation"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
